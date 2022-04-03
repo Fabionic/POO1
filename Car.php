@@ -1,125 +1,110 @@
 <?php
 
 
-  // Car.php
+// Car.php
 
 
-  class Car
+class Car
 
 {
 
     private int $nbWheels = 4;
     public function getnbWheels(): int
 
-{
+    {
 
-    return $this->nbWheels;
-
-}
+        return $this->nbWheels;
+    }
 
     private int $currentSpeed;
     public function getcurrentSpeed(): int
 
     {
-    
+
         return $this->currentSpeed;
-    
     }
-    
-    
+
+
     public function forward(): string
 
-{
+    {
 
-    $this->currentSpeed = 15;
-
-
-    return "Go !";
-
-}
+        $this->currentSpeed = 15;
 
 
-public function brake(): string
+        return "Go !";
+    }
 
-{
 
-   $sentence = "";
+    public function brake(): string
 
-   while ($this->currentSpeed > 0) {
+    {
 
-       $this->currentSpeed--;
+        $sentence = "";
 
-       $sentence .= "Brake !!!";
+        while ($this->currentSpeed > 0) {
 
-   }
+            $this->currentSpeed--;
 
-   $sentence .= "I'm stopped !";
+            $sentence .= "Brake !!!";
+        }
 
-   return $sentence;
+        $sentence .= "I'm stopped !";
 
-}
-    
+        return $sentence;
+    }
+
     private string $color;
 
     public function getColor(): string
 
     {
-    
+
         return $this->color;
-    
     }
-       
-    public function __construct(string $color)
-{
 
-    $this->color = $color;
+    public function __construct(string $color,int $nbSeats, int $energy)
+    {
 
-}
-    
+        $this->color = $color;
+    }
+
     private int $ndSeats;
 
     public function getNdSeats(): int
 
-{
+    {
 
-    return $this->ndSeats;
+        return $this->ndSeats;
+    }
 
-}
+    
+    {
 
-    public function __construct(int $ndSeats)
-{
-  
-    $this->ndSeats = $ndSeats;
-  
-}
-    private string $energy;
+        $this->ndSeats = $ndSeats;
+    }
+    
+    pivate string $energy;
 
     public function getEnergy(): string
 
-{
+    {
 
-    return $this->energy;
+        return $this->energy;
+    }
 
-}
 
+    {
 
-    public function __construct(string $energy)
-
-{
-
-    $this->energy = $energy;
-
-}
+        $this->energy = $energy;
+    }
 
     private int $energyLevel;
 
     public function getEnergyLevel(): int
 
-{
+    {
 
-    return $this->energyLevel;
-
-}
-
-
+        return $this->energyLevel;
+    }
 }
